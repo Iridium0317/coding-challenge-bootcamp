@@ -111,7 +111,7 @@ Given two strings `s` and `t`, return the minimum window in `s` which will conta
 Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
 Explanation: "BANC" is the smallest window containing 'A', 'B', and 'C'.
-
+```
 **Approach (Sliding-Window)**
 
 **Solution Code**
