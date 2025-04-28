@@ -50,14 +50,14 @@ Explanation: You can pick [1,2,1].
 **My Understanding**
 给一串数字，要你找出最长的一段连续子数组，里面只能包含两种不同的数字。
 Given a sequence of numbers, find the longest contiguous subarray that contains at most two distinct numbers.
-## Approach (Sliding-Window)
+**Approach (Sliding-Window)**
 1. Use two pointers `left` and `right` and a hashmap `count` to track fruit frequencies in the window.  
 2. Expand `right`, adding `fruits[right]` to `count`.  
 3. While the window contains more than 2 distinct fruits, shrink from the left:
    - Decrement `count[fruits[left]]`; if it becomes 0, remove that key.
    - `left += 1`  
 4. Track `max_len = max(max_len, right - left + 1)` at each step.
-## Solution Code
+**Solution Code**
 ```python
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
@@ -107,8 +107,8 @@ Input: s = "ADOBECODEBANC", t = "ABC"
 Output: "BANC"
 Explanation: "BANC" is the smallest window containing 'A', 'B', and 'C'.
 
-## Approach (Sliding-Window)
-## Solution Code
+**Approach (Sliding-Window)**
+**Solution Code**
 
 ```python
 
@@ -127,13 +127,13 @@ Input: nums = [1,3,5,4,7]
 Output: 3
 Explanation: The longest continuous increasing subsequence is [1,3,5], so its length is 3.
 ```
-## Approach (Sliding-Window)
+**Approach (Sliding-Window)**
 1.  
 2. 
 3. 
 4.
 
-## Solution Code
+**Solution Code**
 ```python
 def findLengthOfLCIS(self, nums: List[int]) -> int:
         left = 0
