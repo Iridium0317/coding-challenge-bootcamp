@@ -108,6 +108,7 @@ Output: "BANC"
 Explanation: "BANC" is the smallest window containing 'A', 'B', and 'C'.
 
 **Approach (Sliding-Window)**
+
 **Solution Code**
 
 ```python
@@ -128,6 +129,7 @@ Output: 3
 Explanation: The longest continuous increasing subsequence is [1,3,5], so its length is 3.
 ```
 **Approach (Sliding-Window)**
+
 1.  
 2. 
 3. 
