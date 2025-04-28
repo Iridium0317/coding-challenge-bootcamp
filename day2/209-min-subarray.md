@@ -1,4 +1,4 @@
-# 209. Minimum Size Subarray Sum（sliding‐window ）
+# 209. Minimum Size Subarray Sum（sliding‐window）
 
 **Problem**  
 Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a contiguous subarray of which the sum is at least `target`. If there is no such subarray, return 0.
@@ -33,7 +33,7 @@ class Solution:
 ```
 
 ---
-# 904. Fruit Into Baskets
+# 904. Fruit Into Baskets（Medium）
 
 **Problem**  
 You have an integer array `fruits` where `fruits[i]` is the type of fruit on the *i*-th tree.  
@@ -47,6 +47,9 @@ Input: fruits = [1,2,1]
 Output: 3
 Explanation: You can pick [1,2,1].
 ```
+**My Understanding**
+给一串数字，要你找出最长的一段连续子数组，里面只能包含两种不同的数字。
+Given a sequence of numbers, find the longest contiguous subarray that contains at most two distinct numbers.
 ## Approach (Sliding-Window)
 1. Use two pointers `left` and `right` and a hashmap `count` to track fruit frequencies in the window.  
 2. Expand `right`, adding `fruits[right]` to `count`.  
@@ -66,18 +69,21 @@ class Solution:
         max_fruits = 0
 
         for right in range(len(fruits)):
-            basket[fruits[right]] += 1  # 把 fruits[right] 放进篮子里
+            basket[fruits[right]] += 1  # 把 右边的水果种类fruits[right] 放进篮子里
 
+ # 不断把最左边的水果数量减掉，直到篮子里只剩下 2 种水果。
             while len(basket) > 2:  # 如果篮子里超过2种水果
                 basket[fruits[left]] -= 1  # 把最左边的水果数量减1
                 if basket[fruits[left]] == 0:
                     del basket[fruits[left]]  # 如果这个水果数量是0，完全移除
                 left += 1  # 收缩左边界
-
+           
             max_fruits = max(max_fruits, right - left + 1)  # 更新最大水果数
 
         return max_fruits
 ```
+<img width="674" alt="image" src="https://github.com/user-attachments/assets/a5a88fc5-5afd-4b66-9125-39a5fd601ecc" />
+
 ---
 
 # 674. Longest Continuous Increasing Subsequence (Sliding‐Window)
