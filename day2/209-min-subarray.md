@@ -46,8 +46,8 @@ Return the maximum number of fruits you can pick.
 Input: fruits = [1,2,1]
 Output: 3
 Explanation: You can pick [1,2,1].
+```
 ## Approach (Sliding-Window)
-
 1. Use two pointers `left` and `right` and a hashmap `count` to track fruit frequencies in the window.  
 2. Expand `right`, adding `fruits[right]` to `count`.  
 3. While the window contains more than 2 distinct fruits, shrink from the left:
@@ -90,6 +90,7 @@ Given an integer array `nums`, return the length of the longest continuous stric
 Input: nums = [1,3,5,4,7]
 Output: 3
 Explanation: The longest continuous increasing subsequence is [1,3,5], so its length is 3.
+```
 ## Approach (Sliding-Window)
 1.  
 2. 
