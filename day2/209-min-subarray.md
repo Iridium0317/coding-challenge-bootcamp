@@ -93,6 +93,29 @@ class Solution:
 - 先数量减一
 - 只有数量真正减到0，才能删掉这个水果种类。
 ---
+# 76. Minimum Window Substring (Sliding‐Window + Hash Map) （Hard）
+
+**Problem**  
+Given two strings `s` and `t`, return the minimum window in `s` which will contain all the characters in `t`. If there is no such window, return an empty string `""`.  
+
+**My Understanding**  
+> 我们需要在 `s` 中找到一个最短的子串，这个子串必须“包含”字符串 `t` 中的所有字符（包括重复）。  
+> 用滑动窗口加哈希表来记录当前窗口内字符频次，动态收缩和扩展窗口，直到窗口刚好覆盖 `t` 中所有字符，再尝试收缩寻找最短解。
+
+**Example**  
+```text
+Input: s = "ADOBECODEBANC", t = "ABC"
+Output: "BANC"
+Explanation: "BANC" is the smallest window containing 'A', 'B', and 'C'.
+
+## Approach (Sliding-Window)
+## Solution Code
+
+```python
+
+```
+---
+
 
 # 674. Longest Continuous Increasing Subsequence (Sliding‐Window)
 
