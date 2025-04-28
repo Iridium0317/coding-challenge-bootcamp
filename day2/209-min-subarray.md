@@ -140,9 +140,25 @@ class Solution:
                 left += 1
         l, r = res
         return s[l:r+1] if res_len != float("inf") else ""
-
-        
 ```
+# 🍎 Python `collections` 常用工具速查表
+
+| 工具 | 导入方式 | 用途 | 简单例子 |
+|:---|:---|:---|:---|
+| `defaultdict` | `from collections import defaultdict` | 字典不存在的 key 时，自动创建默认值（比如默认是0） | `d = defaultdict(int); d['a'] += 1` |
+| `Counter` | `from collections import Counter` | 快速统计元素出现的次数（常用于字符串、数组） | `Counter('aabc') ➔ {'a':2, 'b':1, 'c':1}` |
+| `deque` | `from collections import deque` | 双端队列，可以在队头或队尾快速插入和删除（比 list 高效） | `q = deque(); q.append(1); q.appendleft(2)` |
+| `OrderedDict` | `from collections import OrderedDict` | 记住元素插入的顺序（Python 3.7之后普通dict也有顺序了，较少用） | `od = OrderedDict(); od['a']=1; od['b']=2` |
+| `namedtuple` | `from collections import namedtuple` | 类似小型轻量级的类，用来创建简单的不可变对象 | `Point = namedtuple('Point', ['x', 'y']); p = Point(1, 2)` |
+
+# 🧡 小小温柔版总结
+
+- `defaultdict` 👉 **遇到新key也不会出错**，适合累加/减
+- `Counter` 👉 **自动数数**，适合统计字符串、数组里的元素
+- `deque` 👉 **双头快进快出**，适合 BFS、滑动窗口
+- `OrderedDict` 👉 **记住插入顺序**（现在不常用）
+- `namedtuple` 👉 **简单的数据类**，适合定义小对象（像Point、Student）
+
 ---
 
 
