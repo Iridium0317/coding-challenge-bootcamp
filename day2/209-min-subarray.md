@@ -46,10 +46,6 @@ Return the maximum number of fruits you can pick.
 Input: fruits = [1,2,1]
 Output: 3
 Explanation: You can pick [1,2,1].
-```
-
----
-
 ## Approach (Sliding-Window)
 
 1. Use two pointers `left` and `right` and a hashmap `count` to track fruit frequencies in the window.  
@@ -58,9 +54,6 @@ Explanation: You can pick [1,2,1].
    - Decrement `count[fruits[left]]`; if it becomes 0, remove that key.
    - `left += 1`  
 4. Track `max_len = max(max_len, right - left + 1)` at each step.
-
----
-
 ## Solution Code
 
 ```python
@@ -85,7 +78,6 @@ class Solution:
 
         return max_fruits
 ```
-
 ---
 
 # 674. Longest Continuous Increasing Subsequence (Sliding‐Window)
@@ -98,20 +90,11 @@ Given an integer array `nums`, return the length of the longest continuous stric
 Input: nums = [1,3,5,4,7]
 Output: 3
 Explanation: The longest continuous increasing subsequence is [1,3,5], so its length is 3.
-
-
-```
-
----
-
 ## Approach (Sliding-Window)
-
 1.  
 2. 
 3. 
-4. 
-
----
+4.
 
 ## Solution Code
 ```python
@@ -129,7 +112,6 @@ def findLengthOfLCIS(self, nums: List[int]) -> int:
                 left = right
         return sum
 ```
-
 ---
 
 
