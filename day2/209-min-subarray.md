@@ -58,7 +58,6 @@ Given a sequence of numbers, find the longest contiguous subarray that contains 
    - `left += 1`  
 4. Track `max_len = max(max_len, right - left + 1)` at each step.
 ## Solution Code
-
 ```python
 class Solution:
     def totalFruit(self, fruits: List[int]) -> int:
