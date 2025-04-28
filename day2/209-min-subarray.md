@@ -1,4 +1,4 @@
-# 209. Minimum Size Subarray Sum
+# 209. Minimum Size Subarray Sum（sliding‐window ）
 
 **Problem**  
 Given an array of positive integers `nums` and a positive integer `target`, return the minimal length of a contiguous subarray of which the sum is at least `target`. If there is no such subarray, return 0.
@@ -9,6 +9,7 @@ Input: target = 7, nums = [2,3,1,2,4,3]
 Output: 2
 Explanation: The subarray [4,3] has the minimal length under the problem constraint.
 
+**Solution Code**
 ```python
 class Solution:
     def minSubArrayLen(self, target: int, nums: List[int]) -> int:
@@ -29,4 +30,8 @@ class Solution:
             right += 1
         
         return min_len if min_len != float('inf') else 0
-        
+```````
+Input: target = 7, nums = [2,3,1,2,4,3]
+Output: 2
+
+
