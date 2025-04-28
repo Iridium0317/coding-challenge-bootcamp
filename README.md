@@ -1,9 +1,10 @@
 # coding-challenge-bootcamp
 A collection of LeetCode and algorithm solutions with insights for U.S. tech interviews.
 
-## day2 数组 part02
 
-### 209. 长度最小的子数组
+├── day2/
+│   ├── README.md            ← your index with links
+│   └── 209-min-subarray.md  ← your new page
 
 **Problem**  
 给定一个含有 n 个正整数的数组 `nums` 和一个正整数 `target`，找出该数组中满足其和 ≥ `target` 的长度最小的连续子数组，并返回它的长度。如果不存在，返回 0。
