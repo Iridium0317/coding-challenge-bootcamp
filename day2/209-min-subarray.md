@@ -117,7 +117,31 @@ Explanation: "BANC" is the smallest window containing 'A', 'B', and 'C'.
 **Solution Code**
 
 ```python
+class Solution:
+    def minWindow(self, s: str, t: str) -> str:
+        from collections import Counter
+        need = Counter(t)  # 统计t中每个字母需要的次数
+        window = {}  # 当前窗口中各字母的次数
+        have, need_count = 0, len(need)
+        res, res_len = [-1, -1], float("inf")
+        left = 0
+        for right in range(len(s)):
+            c = s[right]
+            window[c] = window.get(c, 0) + 1
+            if c in need and window[c] == need[c]:
+                have += 1
+            while have == need_count:
+                if (right - left + 1) < res_len: # 更新最小窗口
+                    res = [left, right]
+                    res_len = right - left + 1
+                window[s[left]] -= 1 # 开始缩小窗口
+                if s[left] in need and window[s[left]] < need[s[left]]:
+                    have -= 1
+                left += 1
+        l, r = res
+        return s[l:r+1] if res_len != float("inf") else ""
 
+        
 ```
 ---
 
