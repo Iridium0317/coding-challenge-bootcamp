@@ -65,9 +65,8 @@ Given an `m x n` matrix, return all elements of the matrix in spiral order (cloc
 <img width="383" alt="image" src="https://github.com/user-attachments/assets/a7b49244-c5a9-4ac4-833d-7c5726a9274a" />
 
 **My Understanding**  
-```text
 和上一题类似
-```
+
 
 **Solution Code**
 ```python
