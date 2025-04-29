@@ -159,7 +159,7 @@ sum(vec[l..r]) = v[l] + ... + v[r] = p[r]-p[l-1]
 import sys
 
 def main():
-    data = sys.stdin.read().strip().split()
+    data = sys.stdin.read().strip().split() #sys.stdin.read() reads all input from standard input,.strip() removes any leading or trailing whitespace (spaces, newlines) from that string. .split() with no arguments splits the string on any whitespace (spaces, tabs, newlines), returning a list of substrings (tokens).
     if not data:
         return
 
