@@ -3,9 +3,8 @@
 Given a positive integer `n`, generate an `n × n` matrix filled with numbers from `1` to `n²` in spiral order (clockwise, from outer layer to inner layer).
 
 **Example**  
-```text
 <img width="339" alt="image" src="https://github.com/user-attachments/assets/35368963-9d7b-4d59-b107-12d87812b171" />
-```
+
 **My Understanding**  
 ```text
 
