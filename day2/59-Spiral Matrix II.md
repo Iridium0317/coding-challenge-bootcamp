@@ -126,6 +126,7 @@ For each query `a b`, print a single integer on its own line—the value of  Arr
 
 **Example**  
 ```text
+Input:
 5
 1
 2
@@ -137,21 +138,53 @@ For each query `a b`, print a single integer on its own line—the value of  Arr
 
 Output:
 9    # 2 + 3 + 4
-15   # 1 + 2 + 3 + 4 + 5
+15   # 1 + 2 + 3 + 4 + 5 
 ```
 **My Understanding**  
 ```text
 
 ```
-**Approach (Sliding-Window)**
+**Approach: Prefix Sum**
 ```text
-1.  
-2. 
-3. 
-4.
+To answer multiple range‐sum queries on an array `vec`, we first build a **prefix sum** array `p` of the same length:
+p[i] = vec[0] + vec[1] + ... + vec[i]
+The sum of any subarray vec[l..r] (0 ≤ l ≤ r < n) can be computed in O(1) time as:
+sum(vec[l..r]) = v[l] + ... + v[r] = p[r]-p[l-1]
+<img width="720" alt="image" src="https://github.com/user-attachments/assets/86b7503e-bba5-46df-b510-cd0ab7645f9f" />
+
 ```
+
 **Solution Code**
 ```python
+import sys
+
+def main():
+    data = sys.stdin.read().strip().split()
+    if not data:
+        return
+
+    # 读取数组长度和元素
+    n = int(data[0])
+    arr = list(map(int, data[1:1+n]))
+
+    # 构建前缀和数组，p[i] = sum(arr[0..i-1])
+    p = [0] * (n + 1)
+    for i in range(n):
+        p[i+1] = p[i] + arr[i]
+
+    # 处理每个查询 [a, b]
+    idx = 1 + n
+    out = []
+    while idx + 1 < len(data):
+        a = int(data[idx])
+        b = int(data[idx+1])
+        idx += 2
+        out.append(str(p[b+1] - p[a])) # 区间和 = p[b+1] - p[a]
+
+    sys.stdout.write("\n".join(out))
+
+if __name__ == "__main__":
+    main()
 
 ```
 ---
