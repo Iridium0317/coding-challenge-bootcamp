@@ -123,6 +123,7 @@ Given an integer array `Array`, compute the sum of its elements over each specif
 ### Output
 
 For each query `a b`, print a single integer on its own line—the value of  Array[a] + Array[a+1] + … + Array[b]
+
 **Example**  
 ```text
 5
