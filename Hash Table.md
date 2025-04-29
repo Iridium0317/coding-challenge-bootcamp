@@ -1,10 +1,11 @@
 # HashMap
-**> 当我们遇到了要快速判断一个元素是否出现在集合里的时候，就要考虑哈希法**
-> Whenever you need to perform fast membership checks—i.e., to quickly determine if an element exists in a collection—you should consider using a hash-based approach (e.g., a hash table).
+> **当我们遇到了要快速判断一个元素是否出现在集合里的时候，就要考虑哈希法**
+Whenever you need to perform fast membership checks—i.e., to quickly determine if an element exists in a collection—you should consider using a hash-based approach (e.g., a hash table).
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/35079197-c9b7-486d-99de-537f831eb845" />
 <img width="754" alt="image" src="https://github.com/user-attachments/assets/2f7fa5fd-d23b-4575-92b0-720d42e590a0" />
 <img width="756" alt="image" src="https://github.com/user-attachments/assets/885cb451-0521-4af4-b519-78f8e332f1f4" />
 <img width="756" alt="image" src="https://github.com/user-attachments/assets/01a503de-ef1d-49ec-812a-818090938457" />
+
 
 When your raw hashCode exceeds the number of buckets (tableSize), you map it back into the valid range by taking the modulus:
 - **`index = hashCode % tableSize`**  
