@@ -110,15 +110,33 @@ class Solution:
 
 
 
-# 59. Spiral Matrix II
-
-
+# Range Sum (Prefix‐Sum) 区间和
 **Problem**  
+Given an integer array `Array`, compute the sum of its elements over each specified interval.
 
+### Input
 
+1. The first line contains an integer `n`, the length of `Array`.  
+2. The next `n` lines each contain one integer, the elements of `Array` in order.  
+3. Each subsequent line contains two integers `a` and `b` (with `b ≥ a`), representing a query for the sum of the subarray from index `a` to index `b`. Queries continue until end of file.
+
+### Output
+
+For each query `a b`, print a single integer on its own line—the value of  Array[a] + Array[a+1] + … + Array[b]
 **Example**  
 ```text
+5
+1
+2
+3
+4
+5
+1 3
+0 4
 
+Output:
+9    # 2 + 3 + 4
+15   # 1 + 2 + 3 + 4 + 5
 ```
 **My Understanding**  
 ```text
