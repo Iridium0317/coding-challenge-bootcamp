@@ -4,7 +4,6 @@ Given a positive integer `n`, generate an `n × n` matrix filled with numbers fr
 
 **Example**  
 <img width="339" alt="image" src="https://github.com/user-attachments/assets/35368963-9d7b-4d59-b107-12d87812b171" />
-
 **My Understanding**  
 ```text
 
