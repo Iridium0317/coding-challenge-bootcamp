@@ -1,4 +1,4 @@
-# coding-challenge-bootcamp(代码随想录)
+# coding-challenge (代码随想录)
 
 A collection of LeetCode and algorithm solutions with insights for U.S. tech interviews.
 
