@@ -22,7 +22,7 @@ Explanation: Nodes with value 6 are removed.
 **Solution Code**
 
 ```python
-（版本一）虚拟头节点法删除头节点
+# 虚拟头节点法删除头节点
 class Solution:
     def removeElements(self, head: Optional[ListNode], val: int) -> Optional[ListNode]:
         # 创建虚拟头部节点以简化删除过程
