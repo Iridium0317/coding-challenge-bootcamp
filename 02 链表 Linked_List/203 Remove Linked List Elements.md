@@ -1,5 +1,5 @@
 # 203. Remove Linked List Elements
-[LeetCode Problem Link]([https://leetcode.com/problems/delete-the-middle-node-of-a-linked-list/](https://leetcode.cn/problems/remove-linked-list-elements/))
+[LeetCode Problem Link](https://leetcode.cn/problems/remove-linked-list-elements/)
 **Problem**  
 Given the `head` of a singly linked list and an integer `val`, remove **all** the nodes of the linked list that have `Node.val == val`, and return the new head of the list.
 
