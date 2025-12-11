@@ -18,6 +18,11 @@ class ListNode:
 <img width="768" alt="image" src="https://github.com/user-attachments/assets/d94b35ec-c4c3-4bb2-beec-13e355666559" />
 <img width="760" alt="image" src="https://github.com/user-attachments/assets/bb79405e-3b56-4ae3-9cfe-01a15874996b" />
 
+
+- 链表不是“实物”，链表是“关系”。指针不是“移动节点”，指针是“修改关系”。
+- 节点是房子。它就在内存的某个地址立着，永远不会动。指针 (curr, next)是门牌号导航。 我们真正做的是擦掉并重写了指路牌
+
+
 ## Problems
 
 203
