@@ -1,0 +1,59 @@
+# 160. Intersection of Two Linked Lists
+[LeetCode Link](https://leetcode.cn/problems/intersection-of-two-linked-lists/)
+
+
+**Problem**  
+Given the heads of two singly linked-lists `headA` and `headB`, return the node at which the two lists intersect. If the two linked lists have no intersection at all, return `null`.
+
+The test cases are generated such that there are no cycles anywhere in the entire linked structure.
+
+**Example**
+
+```text
+Input: intersectVal = 8, listA = [4,1,8,4,5], listB = [5,6,1,8,4,5], skipA = 2, skipB = 3
+Output: Intersected at '8'
+Explanation: The intersected node's value is 8 (note that this must not be 0 if the two lists intersect).
+From the head of A, it reads as [4,1,8,4,5]. From the head of B, it reads as [5,6,1,8,4,5]. There are 2 nodes before the intersected node in A; There are 3 nodes before the intersected node in B.
+```
+
+**My Understanding**
+
+```text
+
+```
+
+**Solution**
+
+```python
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, x):
+#         self.val = x
+#         self.next = None
+
+class Solution:
+    def getIntersectionNode(self, headA: ListNode, headB: ListNode) -> Optional[ListNode]:
+        # 边界检查
+        if not headA or not headB:
+            return None
+        
+        pA = headA
+        pB = headB
+        
+        # 只要两人没相遇，就一直跑
+        # 即使没有交点，两人最后都会变成 None，也会相等 (None == None)，退出循环
+        while pA != pB:
+            # A 走完了吗？走完了去 B 的头，没走完继续走
+            pA = headB if pA is None else pA.next
+
+            pB = headA if pB is None else pB.next
+            
+        return pA
+        
+```
+**Note**
+
+*   Time Complexity: $O(M + N)$ (Where M and N are the lengths of the two lists)
+*   Space Complexity: $O(1)$
+
+---
