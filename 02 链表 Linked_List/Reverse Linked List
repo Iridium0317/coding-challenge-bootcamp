@@ -1,0 +1,44 @@
+# 206. Reverse Linked List
+[LeetCode Link](https://leetcode.cn/problems/reverse-linked-list/)
+
+
+**Problem**  
+Given the `head` of a singly linked list, reverse the list, and return the *reversed list*.
+
+**Example**
+
+```text
+Input: head = [1,2,3,4,5]
+Output: [5,4,3,2,1]
+```
+
+**My Understanding**
+
+```text
+
+```
+
+**Solution**
+
+```python
+class Solution:
+    def reverseList(self, head: Optional[ListNode]) -> Optional[ListNode]:
+        prev = None   #已经处理好的node
+        curr = head   #当前要处理的node
+
+        while curr:
+            temp = curr.next  
+            curr.next = prev  
+            prev = curr      
+            curr = temp       
+            
+        return prev
+        
+
+```
+**Note**
+
+*   Time Complexity: $O(N)$  # 总耗时与节点数量成正比
+*   Space Complexity: $O(1)$
+
+---
