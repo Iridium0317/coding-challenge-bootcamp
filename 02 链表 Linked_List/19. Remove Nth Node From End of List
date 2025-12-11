@@ -15,7 +15,10 @@ Explanation: The second node from the end is 4, removing it leaves 1->2->3->5.
 **My Understanding**
 
 ```text
-
+在未遍历到链表结尾时，我们无法知道链表的长度
+创造差值： 把 Slow 和 Fast 之间的这段距离，想象成一根长度为n + 1的棍子。
+当Fast 撞墙 (None) 停下时，棍子的左端Slow就停在了倒数第 n 个节点的前一个位置
+根据链表删除法则，要删 X，我必须站在 X 的前一个节点 P上
 ```
 
 **Solution**
@@ -26,27 +29,33 @@ Explanation: The second node from the end is 4, removing it leaves 1->2->3->5.
 #     def __init__(self, val=0, next=None):
 #         self.val = val
 #         self.next = next
+
+# Definition for singly-linked list.
+# class ListNode:
+#     def __init__(self, val=0, next=None):
+#         self.val = val
+#         self.next = next
 class Solution:
     def removeNthFromEnd(self, head: Optional[ListNode], n: int) -> Optional[ListNode]:
-        # Use a dummy node to handle edge cases easily (e.g., removing the head)
-        dummy = ListNode(0, head)
+        # 涉及删除，必须用 Dummy
+        dummy = ListNode(next=head)
+        
         slow = dummy
         fast = dummy
         
-        # Move fast pointer n + 1 steps ahead
-        # This ensures that when fast reaches the end, slow is just before the target node
+        # 让 Fast 先走 n+1 步 让 Slow 停在被删节点的前一个
         for _ in range(n + 1):
             fast = fast.next
-            
-        # Move both pointers until fast reaches the end
+
+        # 同时移动，直到 Fast 走到头    
         while fast:
             slow = slow.next
             fast = fast.next
             
-        # Skip the desired node
         slow.next = slow.next.next
         
         return dummy.next
+        
 ```
 **Note**
 
