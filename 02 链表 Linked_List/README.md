@@ -20,6 +20,11 @@ class ListNode:
 
 ## Problems
 
-24. Swap Nodes in Pairs
+203
+707
+206
+24
+19
+142
 
 ---
