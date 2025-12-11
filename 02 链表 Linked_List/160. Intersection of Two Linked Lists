@@ -41,7 +41,7 @@ class Solution:
         pB = headB
         
         # 只要两人没相遇，就一直跑
-        # 即使没有交点，两人最后都会变成 None，也会相等 (None == None)，退出循环
+        # 即使没有交点，两人最后都会变成 None，也会相等 (None == None)，退出循环，指向同一个内存块的时候才算相等
         while pA != pB:
             # A 走完了吗？走完了去 B 的头，没走完继续走
             pA = headB if pA is None else pA.next
@@ -49,6 +49,7 @@ class Solution:
             pB = headA if pB is None else pB.next
             
         return pA
+        
         
 ```
 **Note**
