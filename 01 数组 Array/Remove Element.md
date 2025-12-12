@@ -106,12 +106,21 @@ It does not matter what you leave beyond the returned k (hence they are undersco
 
 ### Note
 ```text
-
+1. 不能用切片for i,num in enumerate(nums[1::]): Python 实际上复制了一份新的列表
 ```
 
 ### Solution
 ```python
-
+class Solution:
+    def removeDuplicates(self, nums: List[int]) -> int:
+        if len(nums) == 1:
+            return 1
+        slow = 1
+        for fast in range(1,len(nums)):
+            if nums[fast] != nums[fast-1]:
+                nums[slow] = nums[fast]
+                slow+=1
+        return slow
 ```
 **Complexity**
 
