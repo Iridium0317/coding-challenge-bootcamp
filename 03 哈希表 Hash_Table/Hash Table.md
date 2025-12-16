@@ -70,30 +70,4 @@ When we want to apply hashing to solve problems, we typically choose one of the 
 
 **牺牲了空间换取了时间**
 
-
-# 203. Remove Linked List Elements
-**Problem**  
-Given the `head` of a singly linked list and an integer `val`, remove **all** the nodes of the linked list that have `Node.val == val`, and return the new head of the list.
-
-**Example**  
-```text
-Input: head = [1,2,6,3,4,5,6], val = 6
-Output: [1,2,3,4,5]
-Explanation: Nodes with value 6 are removed.
-```
-**My Understanding**  
-```text
-
-```
-**Approach (Sliding-Window)**
-```text
-1.  
-2. 
-3. 
-4.
-```
-**Solution Code**
-```python
-
-```
 ---
